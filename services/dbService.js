@@ -3,11 +3,11 @@ const { user } = require("pg/lib/defaults");
 
 // Create a connection pool to handle database connections
 const pool = new Pool({
-	user: "doadmin",
-	host: "jobjack-tech-assessments-do-user-3965150-0.b.db.ondigitalocean.com",
-	database: "tech_assess_thato",
-	password: "AVNS_rbiTyQ_BS7wAYbXjFhV",
-	port: 25060,
+	user: process.env.USER,
+	host: process.env.HOST,
+	database: process.env.DATABASE,
+	password: process.env.PASSWORD,
+	port: process.env.PORT,
 	ssl: {
 		sslmode: "require",
 	},
